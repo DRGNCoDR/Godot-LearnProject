@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjj7mjqodk1b"]
+
+[ext_resource type="PackedScene" uid="uid://22tb2xmhmay1" path="res://Scene/Basic Functionality/Player.tscn" id="1_nu2l1"]
+[ext_resource type="PackedScene" uid="uid://cpj8crlrdxuye" path="res://Scene/Basic Functionality/PickupItem.tscn" id="2_1do6g"]
+[ext_resource type="PackedScene" uid="uid://bk8schgoft55t" path="res://Scene/Basic Functionality/InteractibleObject.tscn" id="3_hpgsu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7rtm"]
+size = Vector2(1158, 31)
+
+[node name="Start_tscn" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_nu2l1")]
+position = Vector2(115, 257)
+
+[node name="PickupItem" parent="." instance=ExtResource("2_1do6g")]
+position = Vector2(515, 524)
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+position = Vector2(568, 604)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_l7rtm")
+
+[node name="InteractibleObject" parent="." instance=ExtResource("3_hpgsu")]
+position = Vector2(1045, 518)
