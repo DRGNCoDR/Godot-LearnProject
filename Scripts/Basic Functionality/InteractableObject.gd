@@ -1,3 +1,8 @@
+#ADD MAX_SPAWN_PICKUP = 5 to Singleton class
+#ADD CURRENT_SPAWNED_PICKUP_ITEMS += 1 when spawning a new one
+
+#ADD If statement to not spawn new items if current is >= max
+
 extends Area2D
 
 var allowInteract 

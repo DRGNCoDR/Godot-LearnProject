@@ -14,3 +14,7 @@ config/name="LearnProject"
 run/main_scene="res://Scene/Basic Functionality/start.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SingletonVariables="*res://Scripts/Basic Functionality/singletonVariables.gd"
